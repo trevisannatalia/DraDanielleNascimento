@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="caminho/para/logoDanielle.png">
+    <title>Dra. Danielle Nascimento | Biomédica Esteta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="logoDanielle.png" alt="Logo Danielle Nascimento" class="logo">
+        <h1>DANIELLE NASCIMENTO</h1>
+        <div class="subtitle">Biomédica Esteta | Esteticista Cosmetóloga</div>
+    </header>
+    <section class="main-content">
+        <img src="01.png" alt="Dra. Danielle Nascimento" class="profile-img">
+        <div class="info">
+            <h2>Bem-vinda ao consultório de estética avançada</h2>
+            <p>
+                Atendimento personalizado com foco em realçar sua beleza natural, utilizando técnicas modernas e
+                seguras.
+                Dra. Danielle Nascimento é biomédica esteta e esteticista cosmetóloga, referência em procedimentos
+                minimamente invasivos e cuidados com a pele.
+            </p>
+            <div class="servicos">
+                <h3>Serviços oferecidos:</h3>
+                <ul>
+                    <li>Botox</li>
+                    <li>Preenchimento Labial</li>
+                    <li>Preenchimento Bigode Chinês</li>
+                    <li>Preenchimento de Queixo</li>
+                    <li>Preenchimento de Olheira</li>
+                    <li>Limpeza de Pele</li>
+                    <li>Rinomodelação</li>
+                </ul>
+            </div>
+            <a href="#contato" class="cta">Agende sua avaliação</a>
+        </div>
+    </section>
+    <section class="sobre-clinica">
+        <div class="container-sobre">
+            <div class="imagens-sobre">
+                <img src="images/draDanielle15.jpeg" alt="Equipe da clínica" class="img-sobre">
+                <img src="images/draDanielle80.png" alt="Sala de atendimento" class="img-sobre">
+                <img src="images/draDanielle10.jpeg" alt="Produtos utilizados" class="img-sobre">
+                <img src="images/draDanielle21.jpeg" alt="Fachada da clínica" class="img-sobre">
+            </div>
+            <div class="texto-sobre">
+                <span class="tag-local">O Consultório</span>
+                <h2>Cuidando da sua autoestima todos os dias!</h2>
+                <p>
+                    O consultório da Dra. Danielle Nascimento foi criado para oferecer um ambiente moderno, acolhedor e
+                    completo para cuidados com a pele e o corpo. Aqui, você conta com uma profissional altamente
+                    qualificada, pronta para proporcionar uma experiência única e personalizada.
+                </p>
+                <p>
+                    São oferecidos atendimentos em procedimentos minimamente invasivos e tratamentos estéticos, sempre
+                    com foco em resultados naturais, segurança e bem-estar.
+                </p>
+                <p>
+                    O objetivo é ir além da estética, ajudando você a valorizar sua beleza e autoestima, com
+                    acompanhamento contínuo e dedicado.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Adicione isso acima da seção de formulário -->
+    <section class="resultados">
+        <h2>Resultados Reais</h2>
+        <div class="filtros">
+            <button class="filtro-btn active" data-categoria="todos">Todos</button>
+            <button class="filtro-btn" data-categoria="botox">Botox</button>
+            <button class="filtro-btn" data-categoria="preenchimento-labial">Preenchimento Labial</button>
+            <button class="filtro-btn" data-categoria="bigode-chines">Bigode Chinês</button>
+            <button class="filtro-btn" data-categoria="rinomodelacao">Rinomodelação</button>
+        </div>
+        <div class="galeria" id="galeria">
+            <!-- As imagens serão inseridas via JS -->
+        </div>
+
+        <!-- Modal para expandir imagem -->
+        <div id="modal" class="modal">
+            <span class="fechar" id="fecharModal">&times;</span>
+            <img class="modal-conteudo" id="imgModal">
+            <div class="modal-categoria" id="modalCategoria"></div>
+        </div>
+    </section>
+    <!-- Formulário -->
+    <section class="form-section" id="contato">
+        <div class="form-container">
+            <!-- Formulário de Mensagem -->
+            <div class="form-box">
+                <h3>Envie sua mensagem</h3>
+                <form id="formContato">
+                    <input type="text" placeholder="Nome completo" required>
+                    <input type="email" placeholder="E-mail" required>
+                    <input type="tel" placeholder="WhatsApp" required>
+                    <textarea rows="4" placeholder="Como podemos ajudar?" required></textarea>
+                    <button type="submit">Enviar mensagem</button>
+                </form>
+            </div>
+
+            <!-- Widget de Agendamento -->
+            <div class="form-box">
+                <h3>Solicite seu Agendamento</h3>
+                <div class="calendly-inline-widget"
+                    data-url="https://calendly.com/dra-daninascimento-agendamento?locale=pt-BR"
+                    style="min-width:320px; height:600px; width:100%;"></div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <footer>
+        © 2025 Dra. Danielle Nascimento | Biomédica Esteta · Esteticista Cosmetóloga
+    </footer>
+    <script src="script.js"></script>
+
+    <!-- Calendly -->
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+    <script>
+        document.getElementById('formContato').addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Aqui você precisaria conectar a um serviço backend como Formspree ou AWS Lambda
+            alert('Mensagem enviada com sucesso! Entraremos em contato em até 24h.');
+            this.reset();
+        });
+    </script>
+
+</body>
+
+</html>
