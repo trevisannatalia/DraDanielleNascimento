@@ -93,17 +93,6 @@
     <!-- Formulário -->
     <section class="form-section" id="contato">
         <div class="form-container">
-            <!-- Formulário de Mensagem -->
-            <div class="form-box">
-                <h3>Envie sua mensagem</h3>
-                <form id="formContato">
-                    <input type="text" placeholder="Nome completo" required>
-                    <input type="email" placeholder="E-mail" required>
-                    <input type="tel" placeholder="WhatsApp" required>
-                    <textarea rows="4" placeholder="Como podemos ajudar?" required></textarea>
-                    <button type="submit">Enviar mensagem</button>
-                </form>
-            </div>
 
             <!-- Widget de Agendamento -->
             <div class="form-box">
@@ -112,7 +101,21 @@
                     data-url="https://calendly.com/dra-daninascimento-agendamento?locale=pt-BR"
                     style="min-width:320px; height:600px; width:100%;"></div>
             </div>
-        </div>
+
+            <!-- Formulário de Mensagem
+            <div class="form-box">
+                <h3>Envie sua mensagem</h3>
+                <form id="formContato" action="enviar-email.php" method="post" novalidate>
+                    <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
+                    <input type="email" id="email" name="email" placeholder="E-mail" required>
+                    <input type="text" id="whatsapp" name="whatsapp" placeholder="WhatsApp" required>
+                    <textarea id="mensagem" name="mensagem" placeholder="Como podemos ajudar?" required></textarea>
+                    <button type="submit">Enviar mensagem</button>
+                </form>
+
+                 Mensagem customizada
+                <div id="erroForm" style="color: #bfa16c; font-weight: 600; margin-top: 12px; display: none;"></div>
+            </div>-->
         </div>
     </section>
     <footer>
@@ -122,15 +125,6 @@
 
     <!-- Calendly -->
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-
-    <script>
-        document.getElementById('formContato').addEventListener('submit', function (e) {
-            e.preventDefault();
-            // Aqui você precisaria conectar a um serviço backend como Formspree ou AWS Lambda
-            alert('Mensagem enviada com sucesso! Entraremos em contato em até 24h.');
-            this.reset();
-        });
-    </script>
 
 </body>
 
